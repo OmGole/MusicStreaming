@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Classical",
+    "href": "#",
+    "imageSrc": "./assets/img/classical.jpeg",
+    "imageAlt": "Classical"
+  },
+  {
+    "id": 2,
+    "name": "Rock",
+    "href": "#",
+    "imageSrc": "./assets/img/classical.jpeg",
+    "imageAlt": "Classical"
+  }
+]
