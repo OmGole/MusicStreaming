@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 // import Slider from "./components/Slider";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Song from "./pages/Song";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -25,6 +26,10 @@ const App = () => {
     {
       path: "/profile",
       element: <Profile />,
+    },
+    {
+      path: "/song",
+      element: <Song />,
     },
   ]);
   return (
