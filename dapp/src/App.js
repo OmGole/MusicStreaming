@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Song from "./pages/Song";
+import SongPage from "./pages/SongPage";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -30,6 +31,10 @@ const App = () => {
     {
       path: "/song",
       element: <Song />,
+    },
+    {
+      path: "/songpage",
+      element: <SongPage />,
     },
   ]);
   return (

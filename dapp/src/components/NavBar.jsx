@@ -10,7 +10,7 @@ const NavBar = () => {
     setActive(!active);
   };
   return (
-    <div className="bg-gray-200">
+    <div className="bg-gray-300">
       <div className="flex justify-between">
         <h1 className="text-5xl lg:text-6xl text-black font-bold text-center">
           <Link to="/"> Tunes Block </Link>

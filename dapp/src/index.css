@@ -26,6 +26,9 @@
   backdrop-filter: blur(10px);
   border: 1px solid rgba(88, 76, 76, 0.25);
 }
+.bg-music {
+  background-image: url("https://c0.wallpaperflare.com/preview/285/1009/176/concery-wallpaper-festival-party.jpg");
+}
 
 @layer components {
   .card {

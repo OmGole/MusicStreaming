@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import NFTCard from "./NFTCard";
+import Particle from "./Particle";
 
 const Genres = [
   {
@@ -78,7 +79,7 @@ const HomeSection = () => {
         <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8 ">
           {Genres.map((genre) => (
             <div className="h-[350px] w-[270px] bg-gray-800 mx-auto mt-20 rounded-xl">
-              <Link to="/song">
+              <Link to="/songpage">
                 <img
                   src={genre.imageSrc}
                   alt={genre.imageAlt}
