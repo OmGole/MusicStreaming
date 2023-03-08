@@ -11,7 +11,6 @@ const Home = () => {
     <div className="bg-gray-200 w-full h-full">
       <NavBar />
       <div className="flex">
-        <SideBar className="basis-1/6" />
         <HomeSection className="basis-5/6" />
       </div>
       {/* <MusicPlayer /> */}

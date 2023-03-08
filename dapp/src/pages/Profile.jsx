@@ -1,19 +1,24 @@
 import React, { useState, useEffect } from "react";
 import useContract from "../hooks/useContract";
-import useRegister from "../hooks/useRegister";
+import useRegister from "../hooks/useConnect";
 import NavBar from "../components/NavBar";
-import { Link } from "react-router-dom";
+import HomeSection from "../components/HomeSection";
 
 const Profile = () => {
   const { contract } = useContract();
   const { connect, account } = useRegister();
-  const [role, setRole] = useState("user");
+  const [name, setName] = useState("");
+  const [description, setDescription] = useState("");
+  const [audioNft, setAudioNft] = useState("");
+  const [imageNft, setImageNft] = useState("");
+  const [genre, setGenre] = useState("");
+  const [price, setPrice] = useState();
 
-  const handleRole = (e) => {
-    setRole(e.target.value);
-  };
+  useEffect(() => {
+    console.log(account);
+  },[account])
   return (
-    <div className="bg-gray-200 h-screen">
+    <div className="bg-gray-200">
       <NavBar />
 
       <div className="sm:container h-full mx-auto flex justify-center content-center items-center">
@@ -38,13 +43,15 @@ const Profile = () => {
                 name="name"
                 id="name"
                 className="ml-12 rounded-md"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
               />
             </div>
             <div className="mb-5">
               <label htmlFor="desc" className="font-semibold">
                 Description
               </label>
-              <input type="text" name="desc" id="desc" className="ml-2" />
+              <textarea name="" id="" cols="" rows="3" className='border-2 rounded-xl py-1 px-3 w-full' placeholder='Description' value = {description} onChange={(e) => setDescription(e.target.value)}></textarea>
             </div>
             <div className="mb-5">
               <label htmlFor="genre" className="font-semibold">
@@ -84,6 +91,8 @@ const Profile = () => {
           </form>
         </div>
       </div>
+      <h2 className="text-2xl lg:text-4xl text-black font-bold text-center mt-16">My NFTS</h2>
+        <HomeSection/>
     </div>
   );
 };

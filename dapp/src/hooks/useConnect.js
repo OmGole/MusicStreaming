@@ -1,11 +1,8 @@
-import useContract from './useContract'
-import {ethers} from 'ethers';
 import { useState } from 'react';
 
 const Ethereum = typeof window !== 'undefined' && window.ethereum;
 
-const useRegister = () => {
-  const {Music} = useContract();
+const useConnect = () => {
   const [currentAccount,setCurrentAccount] = useState();
 
   const connect = async () => {
@@ -33,4 +30,4 @@ const useRegister = () => {
   return { connect, account:currentAccount };
 }
 
-export default useRegister;
+export default useConnect;
