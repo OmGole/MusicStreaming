@@ -46,7 +46,7 @@ const SongPage = () => {
             <img
               class="object-cover object-center rounded-xl"
               alt="hero"
-              src="https://c0.wallpaperflare.com/preview/285/1009/176/concery-wallpaper-festival-party.jpg"
+              src="https://i.scdn.co/image/ab67616d0000b273174e964b6fdf664e564b4f62"
             />
           </div>
         </div>
@@ -54,13 +54,13 @@ const SongPage = () => {
 
       {/* Description  */}
 
-      <section class="text-gray-600 bg-blue-300 body-font overflow-hidden">
+      <section class="text-gray-600 bg-blue-300 body-font overflow-hidden ">
         <div class="container px-5 py-24 mx-auto">
           <div className="flex">
             <div class="flex flex-wrap -m-12">
               <div class="p-12 md:w-1/2 flex flex-col items-start">
                 <div className="flex flex-row">
-                  <h4 className="text-black font-bold text-3xl">Tevvez</h4>
+                  <h4 className="text-black font-bold text-6xl">Tevvez</h4>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="#ff00e1"
@@ -76,7 +76,7 @@ const SongPage = () => {
                     />
                   </svg>
                   <button className="pl-4">
-                    <span class="inline-block py-1 px-2 rounded bg-indigo-50 text-indigo-500 text-md font-medium tracking-widest ">
+                    <span class="inline-block mt-4 py-1 px-2 rounded bg-indigo-50 text-indigo-500 text-md text-3xl tracking-widest ">
                       Follow
                     </span>
                   </button>
@@ -85,7 +85,7 @@ const SongPage = () => {
                 <h2 class="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4">
                   Roof party normcore before they sold out, cornhole vape
                 </h2>
-                <p class="leading-relaxed mb-8">
+                <p class="leading-relaxed text-md mb-8">
                   Live-edge letterpress cliche, salvia fanny pack humblebrag
                   narwhal portland. VHS man braid palo santo hoodie brunch trust
                   fund. Bitters hashtag waistcoat fashion axe chia unicorn.
@@ -98,22 +98,31 @@ const SongPage = () => {
 
             {/* NFT Card */}
 
-            <div className="h-[400px] w-[550px] bg-gray-800 mx-auto mt-15 mr-40 rounded-xl">
-              <img
+            <div className="h-[250px] w-[550px] bg-gray-800 mx-auto mt-15 mr-40 rounded-xl">
+              {/* <img
                 src="https://i.scdn.co/image/ab67616d0000b273174e964b6fdf664e564b4f62"
                 alt="Electronic"
                 className="w-[230px] h-[200] ml-[13px] absolute mt-[20px] rounded-xl"
-              />
-
+              /> */}
+              <p className="text-white font-bold text-[17px] pt-[30px] ml-5">
+                Legend - Tevvez
+              </p>
+              <p className="text-white font-bold text-[17px] pt-[20px] ml-5">
+                Owner: Snoop Dogg
+              </p>
               <div>
-                <p className="text-white font-bold ml-5 text-[20px] pt-[270px]">
-                  Electronic
+                <p className="text-white font-bold ml-5 text-[17px] pt-[20px]">
+                  Genre: Electronic
                 </p>
                 {/* <p className="text-gray-400 ml-5">
               6 mahine ruk meri body banne wali hai
             </p> */}
               </div>
+
               <div className="flex">
+                <p className="text-white font-bold text-[17px] pt-[20px] ml-5">
+                  Current Price:
+                </p>
                 {/* Ethereum icon */}
                 <svg
                   width="11"
@@ -140,8 +149,10 @@ const SongPage = () => {
             </div>
           </div>
         </div>
+        <div className="sticky">
+          <Player className="sticky" />
+        </div>
       </section>
-      <Player className="fixed" />
     </div>
   );
 };

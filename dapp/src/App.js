@@ -1,11 +1,8 @@
+import React from "react";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Profile from "./pages/Profile";
 import Home from "./pages/Home";
-// import Navbar from "./components/Navbar";
-// import Hero from "./components/Hero";
-// import Slider from "./components/Slider";
-
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Song from "./pages/Song";
 import SongPage from "./pages/SongPage";
@@ -27,10 +24,6 @@ const App = () => {
     {
       path: "/profile",
       element: <Profile />,
-    },
-    {
-      path: "/song",
-      element: <Song />,
     },
     {
       path: "/songpage",

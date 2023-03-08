@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import useContract from "../hooks/useContract";
-import useRegister from "../hooks/useRegister";
+import useConnect from "../hooks/useConnect";
 import Navbar from "../components/NavBar";
 import { Link } from "react-router-dom";
 import NFTCard from "../components/NFTCard";
 
 function Login() {
   const { contract } = useContract();
-  const { connect, account } = useRegister();
+  const { connect, account } = useConnect();
   const [role, setRole] = useState("user");
 
   useEffect(() => {
@@ -29,58 +29,23 @@ function Login() {
     setRole(e.target.value);
   };
   return (
-    // <>
-    //   {
-    //     <div>
-    //       <nav>
-    //         <h1 class="title">Tunes Block</h1>
-    //       </nav>
-    //       <div class="register">
-    //         <h1>Login</h1>
-    //         <form>
-    //           <div class="txt_field">
-    //             <select
-    //               name="roles"
-    //               id="roles"
-    //               value={role}
-    //               onChange={(e) => handleRole(e)}
-    //             >
-    //               <option value="user">User</option>
-    //               <option value="artist">Artist</option>
-    //             </select>
-    //           </div>
-    //           <div class="txt_field">
-    //             Wallet Address : <br></br>
-    //             {account}
-    //           </div>
-
-    //           <button className="btn-login" onClick={(e) => getLogin(e)}>
-    //             Login
-    //           </button>
-    //           <div class="signup_link">
-    //             {/* Not a member? <a href="#">Signup</a> */}
-    //           </div>
-    //         </form>
-    //       </div>
-    //     </div>
-    //   }
-    // </>
-
     <div className="h-screen bg-gray-200 ">
       <Navbar />
       {/* <NFTCard /> */}
       <div className="sm:container h-full mx-auto flex justify-center content-center items-center">
         <div className="bg-form shadow-2xl rounded-xl">
+          
+          <form action="" className="p-12">
           <h1 className="text-black font-bold text-3xl  mb-5 text-center">
             Login
           </h1>
-          <form action="" className="px-3 flex flex-col items-center">
-            <div className="mb-5">
-              <label htmlFor="passw" className="font-semibold">
-                Password
-              </label>
-              <input type="password" name="passw" id="passw" className="ml-3" />
-            </div>
+          <div className='mb-5'>
+          <label htmlFor="" className='  pl-2'>Role: </label>
+          <select value={role} onChange={handleRole} className='border-2 py-1 px-2 '>
+            <option value="user">User</option>
+            <option value="artist">Artist</option>
+          </select>
+        </div>
             <p className="font-semibold">
               Wallet Address : <br></br>
               {account}
@@ -93,7 +58,7 @@ function Login() {
               Login
             </button>
             <div class="signup_link" className="font-semibold">
-              Not a member? <Link to="/register">Signup</Link>
+            <Link to="/register">Want to become an Artist? Signup</Link>
             </div>
           </form>
         </div>
