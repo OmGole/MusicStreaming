@@ -1,24 +1,28 @@
 import React, { useEffect } from "react";
+import MyNFTCard from "./MyNFTCard";
 import useConnect from "../hooks/useConnect";
 import useContract from "../hooks/useContract";
-import AllNFTCard from "./AllNFTCard";
-import {Link} from "react-router-dom"
 
-const HomeSection = ({nfts}) => {
+const ProfileSection = ({nfts}) => {
   const { connect, account } = useConnect();
   const { contract } = useContract();
+  useEffect(() =>{
+    connect()
+  },[])
+
+  useEffect(() => {
+    console.log(nfts);
+  },[nfts]);
 
   return (
     <div className="container-md mx-auto">
       <div className="grid grid-cols-4 gap-4 ">
         {nfts?.map((nft) => (
-          <Link to="/song" state={ nft }>
-            <AllNFTCard nft={nft} contract={contract} account={account}/>  
-          </Link>
+            <MyNFTCard nft={nft} contract={contract} account={account}/>  
         ))}
       </div>
     </div>
   );
 };
 
-export default HomeSection;
+export default ProfileSection;

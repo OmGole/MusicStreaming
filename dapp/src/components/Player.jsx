@@ -66,7 +66,7 @@ const playlist = [
   rave,
 ];
 
-export default function Player() {
+export default function Player({song}) {
   const audioPlayer = useRef();
 
   const [index, setIndex] = useState(0);
@@ -175,7 +175,7 @@ export default function Player() {
 
   return (
     <Div>
-      <audio src={currentSong} ref={audioPlayer} muted={mute} />
+      <audio src={song} ref={audioPlayer} muted={mute} />
       <CustomPaper>
         <Box sx={{ display: "flex", justifyContent: "space-between" }}>
           <Stack
@@ -207,14 +207,14 @@ export default function Player() {
               alignItems: "center",
             }}
           >
-            <SkipPreviousIcon
+            {/* <SkipPreviousIcon
               sx={{
                 color: "black",
                 "&:hover": { color: "white" },
               }}
               onClick={toggleSkipBackward}
               disabled={true}
-            />
+            /> */}
             <FastRewindIcon
               sx={{ color: "black", "&:hover": { color: "white" } }}
               onClick={toggleBackward}
@@ -238,10 +238,10 @@ export default function Player() {
               sx={{ color: "black", "&:hover": { color: "white" } }}
               onClick={toggleForward}
             />
-            <SkipNextIcon
+            {/* <SkipNextIcon
               sx={{ color: "black", "&:hover": { color: "white" } }}
               onClick={toggleSkipForward}
-            />
+            /> */}
           </Stack>
 
           <Stack

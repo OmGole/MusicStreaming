@@ -1,9 +1,3 @@
-// We require the Hardhat Runtime Environment explicitly here. This is optional
-// but useful for running the script in a standalone fashion through `node <script>`.
-//
-// You can also run a script with `npx hardhat run <script>`. If you do that, Hardhat
-// will compile your contracts, add the Hardhat Runtime Environment's members to the
-// global scope, and execute the script.
 const hre = require("hardhat");
 
 async function main() {
@@ -13,12 +7,14 @@ async function main() {
 
   const lockedAmount = hre.ethers.utils.parseEther("1");
 
-  const Music = await hre.ethers.getContractFactory("Music");
-  const music = await Music.deploy();
+  const Nft= await hre.ethers.getContractFactory("NFT");
+  const nft = await Nft.deploy();
 
-  await music.deployed();
+  await nft.deployed();
 
- 
+  console.log(
+    `Lock with 1 ETH and unlock timestamp ${unlockTime} deployed to ${nft.address}`
+  );
 }
 
 // We recommend this pattern to be able to use async/await everywhere
