@@ -239,7 +239,7 @@ const SongPage = () => {
                   </p>
                 ) : (
                   <button
-                    className="bg-white px-2 py-1 mt-2 ml-5 rounded-lg"
+                    className="bg-white px-5 py-2 mt-2 ml-5 rounded-full font-poppins"
                     onClick={handleBuy}
                   >
                     Buy

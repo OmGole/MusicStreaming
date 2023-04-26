@@ -16,7 +16,7 @@ module.exports = {
       montserrat:['Montserrat','sans-serif']
     },
     backgroundImage: {
-      'showcase':"url('./assets/headphones.jpg')",
+      'showcase':"url('./assets/headphones.png')",
     }
   },
     screens: {

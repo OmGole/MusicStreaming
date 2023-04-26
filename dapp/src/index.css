@@ -15,3 +15,73 @@ body{
   background-color: #111111;
   color:white;
 }
+
+.bg-main {
+  background: #cf46ca;
+  background: -webkit-radial-gradient(
+    circle,
+    #cf46ca 0%,
+    #ffffff 50%,
+    #000000 100%
+  );
+  background: radial-gradient(circle, #cf46ca 0%, #ffffff 50%, #000000 100%);
+}
+.bg-gradient {
+  background: #f29cff;
+  background: -webkit-linear-gradient(0deg, #f29cff 0%, #eb99ff 100%);
+  background: linear-gradient(0deg, #f29cff 0%, #eb99ff 100%);
+}
+
+.bg-sidebar {
+  background: #a900c0;
+  background: -webkit-linear-gradient(0deg, #a900c0 0%, #cc00ff 100%);
+  background: linear-gradient(0deg, #a900c0 0%, #cc00ff 100%);
+}
+
+.bg-navbar {
+  background: #a900c0;
+  background: -webkit-linear-gradient(0deg, #a900c0 0%, #cc00ff 100%);
+  background: linear-gradient(0deg, #a900c0 0%, #cc00ff 100%);
+}
+
+.bg-form {
+  background: rgba(88, 76, 76, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(88, 76, 76, 0.25);
+}
+
+.btn-grad {
+  background-image: linear-gradient(
+    to right,
+    #da22ff 0%,
+    #9733ee 51%,
+    #da22ff 100%
+  );
+  margin: 10px auto;
+  
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 27px;
+  display: block;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+@layer components {
+  .card {
+    background-color: theme("colors.white");
+    border-radius: theme("borderRadius.lg");
+    padding: theme("spacing.6");
+    box-shadow: theme("boxShadow.xl");
+  }
+
+}

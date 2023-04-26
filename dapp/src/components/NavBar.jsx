@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import {GiMusicSpell} from "react-icons/gi"
+import {MdAccountCircle} from "react-icons/md"
+
 
 const NavBar = () => {
   return (
@@ -15,9 +17,12 @@ const NavBar = () => {
       </Link>
     </div>
     <ul className="flex text-2xl justify-between content-center items-center">
-      <li>
-      </li>
-    </ul>
+        <li>
+          <Link to="/profile" className="block p-4">
+            <MdAccountCircle className="text-3xl" />
+          </Link>
+        </li>
+      </ul>
   </nav>
   );
 };

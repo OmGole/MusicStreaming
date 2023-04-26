@@ -21,7 +21,7 @@ function AllNFTCard({ nft }) {
   }
   console.log(current,nft);
   return (
-    <div class="h-full flex items-center justify-between border-white-200 p-4 bg-[#212121] rounded-lg">
+    <div class="flex items-center justify-between border-white-200 p-4 bg-[#212121] rounded-lg mb-5">
           <div className="flex items-center">
           <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 mr-4" src={current.imageNft} />
           <div class="flex-grow">

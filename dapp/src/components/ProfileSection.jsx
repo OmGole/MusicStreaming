@@ -16,7 +16,7 @@ const ProfileSection = ({nfts}) => {
 
   return (
     <div className="container-md mx-auto">
-      <div className="grid grid-cols-4 gap-4 ">
+      <div className="grid grid-cols-4 gap-4 pb-5">
         {nfts?.map((nft) => (
             <MyNFTCard nft={nft} contract={contract} account={account}/>  
         ))}
