@@ -1,30 +1,23 @@
-import Login from './pages/Login'
-import Register from './pages/Register'
-import Upload from './pages/Upload'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Slider from './components/Slider'
-import bg1 from './assets/img/bg3.jpg'
-import bg2 from './assets/img/bg12.jpg'
-import bg3 from './assets/img/bg15.jpg'
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Profile from "./pages/Profile";
+import Home from "./pages/Home";
+import { Routes, Route } from "react-router-dom";
+import SongPage from './pages/SongPage'
 
-
-function App() {
-  return (
-    <div className="app">
-      {/* Music Streaming */}
-    {/* <Navbar></Navbar>
-    <Hero imageSrc={bg1}></Hero>
-    <Slider imageSrc={bg2} title={'Chase Aesthetics Brah'} subtitle={'We listen to hardstyle in the gym'}>
-    </Slider>
-    <Slider imageSrc={bg3} title={'Chase Aesthetics Brah'} subtitle={'We listen to hardstyle in the gym'}>
-  </Slider> */}
-  {/* <Upload/> */}
-  <Register/>
-  {/* <Login/> */}
-  </div>
-
-  );
-}
+const App = () => {
+  return <>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        {/* <Route element={<PrivateRoute role="user" />}> */}
+          <Route path="/home" element={<Home />} />
+          <Route exact path="/song" element={<SongPage />} />
+          <Route exact path="/profile" element={<Profile />} />
+        {/* </Route> */}
+        {/* <Route path="*" element={<Error />} /> */}
+      </Routes>
+    </>
+};
 
 export default App;
