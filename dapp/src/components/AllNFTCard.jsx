@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import useContract from "../hooks/useContract";
 import { ethers } from "ethers";
 
-
-function AllNFTCard({ nft, contract, account }) {
+function AllNFTCard({ nft }) {
   const [current, setCurrent] = useState();
-
-  
+  const { contract } = useContract();
 
   useEffect(() => {
     const getCurrentNft = async () => {
@@ -17,53 +16,37 @@ function AllNFTCard({ nft, contract, account }) {
     getCurrentNft();
   }, [nft]);
 
-  useEffect(() => {
-    console.log(account);
-  });
-
   if (!current) {
     return <></>;
   }
-  console.log(current);
+  console.log(current,nft);
   return (
-    <div className="h-[350px] w-[270px] bg-gray-800 mx-auto mt-10 rounded-xl">
-      <img
-        src={current.imageNft}
-        className="w-[240px] h-[200] ml-[13px] absolute mt-[20px] rounded-xl"
-      />
-
-      <div>
-        <p className="text-white font-bold ml-5 text-[20px] pt-[230px]">
-          {current.name}
-        </p>
-        <p className="text-gray-500 font-bold ml-5 text-[15px]">
-          {current.genre}
-        </p>
-        {/* <p className="text-gray-400 ml-5">
-              6 mahine ruk meri body banne wali hai
-            </p> */}
-      </div>
-      <div className="flex">
+    <div class="h-full flex items-center justify-between border-white-200 p-4 bg-[#212121] rounded-lg">
+          <div className="flex items-center">
+          <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 mr-4" src={current.imageNft} />
+          <div class="flex-grow">
+            <h2 class="text-white-900 font-poppins font-medium">{current.name}</h2>
+            <p class="text-gray-300 font-montserrat">{current.genre}</p>
+          </div>
+          </div>
+          <div className="flex items-center content-center">
         {/* Ethereum icon */}
         <svg
           width="11"
           height="18"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-[15px] h-[20px] ml-5 mt-5"
+          className="w-[15px] h-[20px] mx-1"
         >
           <path
             d="M11 10.216 5.5 18 0 10.216l5.5 3.263 5.5-3.262ZM5.5 0l5.496 9.169L5.5 12.43 0 9.17 5.5 0Z"
-            fill="#00FFF8"
+            fill="#971ffd"
           />
         </svg>
-        <p className="font-bold text-white mt-[18px] ml-[10px]">
+        <p className="font-bold text-white font-poppins">
           {ethers.utils.formatEther(nft.price)}
         </p>
       </div>
-      <div>
-        
-      </div>
-    </div>
+        </div>
   );
 }
 

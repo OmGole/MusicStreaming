@@ -1,26 +1,24 @@
-import { MenuOutlined } from "@mui/icons-material";
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import MenuItems from "./MenuItems";
+import {GiMusicSpell} from "react-icons/gi"
 
 const NavBar = () => {
-  const [active, setActive] = useState(false);
-
-  const showMenu = () => {
-    setActive(!active);
-  };
   return (
-      <div className="container-md mx-auto">
-        <div className="flex justify-between p-5 items-center">
-        <h1 className="text-3xl lg:text-5xl text-black font-bold text-center">
-          <Link to="/home"> Tunes Block </Link>
-        </h1>
-        <div className="">
-          <Link to="/profile" className="text-xl lg:text-2xl text-black font-bold text-center">Profile</Link>
-        </div>
-        {/* <button className="">Login</button> */}
-        </div>
-      </div>
+    <nav className="flex justify-between p-3 font-poppins content-center items-center w-full mx-auto">
+    <div>
+      <Link className="flex justify-end text-4xl" to="/home">
+        <GiMusicSpell className="md:mr-6 md:ml-0 ml-5 mt-1 text-primary" />
+
+        <h2 className="hidden md:block font-bold">
+          Music<span className="text-primary">Boxx</span>{" "}
+        </h2>
+      </Link>
+    </div>
+    <ul className="flex text-2xl justify-between content-center items-center">
+      <li>
+      </li>
+    </ul>
+  </nav>
   );
 };
 

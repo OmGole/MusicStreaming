@@ -1,38 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Poppins:wght@300;400;500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.bg-gradient {
-  background: #f29cff;
-  background: -webkit-linear-gradient(0deg, #f29cff 0%, #eb99ff 100%);
-  background: linear-gradient(0deg, #f29cff 0%, #eb99ff 100%);
+* {
+  margin: 0;
+  padding:0;
+  box-sizing: border-box !important;
+  /* border:red solid 1px; */
 }
 
-.bg-sidebar {
-  background: #a900c0;
-  background: -webkit-linear-gradient(0deg, #a900c0 0%, #cc00ff 100%);
-  background: linear-gradient(0deg, #a900c0 0%, #cc00ff 100%);
-}
-
-.bg-navbar {
-  background: #a900c0;
-  background: -webkit-linear-gradient(0deg, #a900c0 0%, #cc00ff 100%);
-  background: linear-gradient(0deg, #a900c0 0%, #cc00ff 100%);
-}
-
-.bg-form {
-  background: rgba(88, 76, 76, 0.5);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(88, 76, 76, 0.25);
-}
-
-@layer components {
-  .card {
-    background-color: theme("colors.white");
-    border-radius: theme("borderRadius.lg");
-    padding: theme("spacing.6");
-    box-shadow: theme("boxShadow.xl");
-  }
-  /* ... */
+body{
+  background-color: #111111;
+  color:white;
 }
