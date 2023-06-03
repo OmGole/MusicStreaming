@@ -75,16 +75,16 @@ function MyNFTCard({ nft, contract, account }) {
       <div>
         {nft.seller.toLowerCase() === account &&
           (nft.listed === true ? (
-            <button onClick={handleUnlist} className="bg-white p-2 mt-2 ml-5 rounded-lg">Unlist</button>
+            <button onClick={handleUnlist} className="bg-white p-2 mt-2 ml-5 rounded-lg text-black">Unlist</button>
           ) : (
             <div>
               <input
                 type="number"
                 value={price}
                 onChange={(e) => setPrice(e.target.value)}
-                className="bg-white w-1/2 px-2 mt-2 ml-5 rounded-lg"
+                className="bg-white w-1/2 px-2 mt-2 ml-5 rounded-lg text-black"
               />
-              <button onClick={handleList} className="bg-white px-2 py-1 mt-2 ml-2 rounded-lg">List</button>
+              <button onClick={handleList} className="bg-white px-2 py-1 mt-2 ml-2 rounded-lg text-black">List</button>
             </div>
           ))}
       </div>

@@ -16,14 +16,14 @@ import SkipPreviousIcon from "@mui/icons-material/SkipPrevious";
 // #endregion ------------ ICONS ---------
 
 // #region ------- Tracts -------------------------------------------------------
-import sixDays from "../assets/songs/Six Days (Remix).mp3";
-import youngSinatra3 from "../assets/songs/Logic - Young Sinatra III.mp3";
-import youngSinatra4 from "../assets/songs/Logic - YSIV Freestyle.mp3";
-import rave from "../assets/songs/RAVE.mp3";
-import onePiece from "../assets/songs/Luffy's Fierce Attack.MP3";
-import wellerman from "../assets/songs/Nathan Evans - Wellerman (Sea Shanty).mp3";
-import notAfraid from "../assets/songs/Not Afraid.mp3";
-import tillICollapse from "../assets/songs/'Till I Collapse.mp3";
+// import sixDays from "../assets/songs/Six Days (Remix).mp3";
+// import youngSinatra3 from "../assets/songs/Logic - Young Sinatra III.mp3";
+// import youngSinatra4 from "../assets/songs/Logic - YSIV Freestyle.mp3";
+// import rave from "../assets/songs/RAVE.mp3";
+// import onePiece from "../assets/songs/Luffy's Fierce Attack.MP3";
+// import wellerman from "../assets/songs/Nathan Evans - Wellerman (Sea Shanty).mp3";
+// import notAfraid from "../assets/songs/Not Afraid.mp3";
+// import tillICollapse from "../assets/songs/'Till I Collapse.mp3";
 // #endregion ---------------------------------------------------------------
 
 // #region -------- Styled Components -----------------------------------------
@@ -55,23 +55,23 @@ const PSlider = styled(Slider)(({ theme, ...props }) => ({
 }));
 // #endregion ---------------------------------------------------------------
 
-const playlist = [
-  sixDays,
-  youngSinatra3,
-  youngSinatra4,
-  notAfraid,
-  tillICollapse,
-  onePiece,
-  sixDays,
-  rave,
-];
+// const playlist = [
+//   sixDays,
+//   youngSinatra3,
+//   youngSinatra4,
+//   notAfraid,
+//   tillICollapse,
+//   onePiece,
+//   sixDays,
+//   rave,
+// ];
 
 export default function Player({song}) {
   const audioPlayer = useRef();
 
   const [index, setIndex] = useState(0);
 
-  const [currentSong] = useState(playlist[index]);
+  // const [currentSong] = useState(playlist[index]);
 
   const [isPlaying, setIsPlaying] = useState(false);
   const [volume, setVolume] = useState(30);
@@ -129,25 +129,25 @@ export default function Player({song}) {
     audioPlayer.current.currentTime -= 10;
   };
 
-  const toggleSkipForward = () => {
-    if (index >= playlist.length - 1) {
-      setIndex(0);
-      audioPlayer.current.src = playlist[0];
-      audioPlayer.current.play();
-    } else {
-      setIndex((prev) => prev + 1);
-      audioPlayer.current.src = playlist[index + 1];
-      audioPlayer.current.play();
-    }
-  };
+  // const toggleSkipForward = () => {
+  //   if (index >= playlist.length - 1) {
+  //     setIndex(0);
+  //     audioPlayer.current.src = playlist[0];
+  //     audioPlayer.current.play();
+  //   } else {
+  //     setIndex((prev) => prev + 1);
+  //     audioPlayer.current.src = playlist[index + 1];
+  //     audioPlayer.current.play();
+  //   }
+  // };
 
-  const toggleSkipBackward = () => {
-    if (index > 0) {
-      setIndex((prev) => prev - 1);
-      audioPlayer.current.src = playlist[index - 1];
-      audioPlayer.current.play();
-    }
-  };
+  // const toggleSkipBackward = () => {
+  //   if (index > 0) {
+  //     setIndex((prev) => prev - 1);
+  //     audioPlayer.current.src = playlist[index - 1];
+  //     audioPlayer.current.play();
+  //   }
+  // };
 
   function VolumeBtns() {
     return mute ? (

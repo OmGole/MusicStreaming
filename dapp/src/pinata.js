@@ -68,10 +68,10 @@ export const uploadFileToIPFS = async(file) => {
             }
         })
         .then(function (response) {
-            console.log("https://gateway.pinata.cloud/ipfs/" + response.data.IpfsHash)
+            
             return {
                success: true,
-               pinataURL: "https://gateway.pinata.cloud/ipfs/" + response.data.IpfsHash,
+               pinataURL: "https://cloudflare-ipfs.com/ipfs/" + response.data.IpfsHash,
                hash:response.data.IpfsHash
            };
         })

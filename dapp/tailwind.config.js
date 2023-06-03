@@ -2,6 +2,23 @@
 module.exports = {
   content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
   theme: {
+    extend: {
+    boxShadow: {
+      'overlay': 'inset 0 0 0 2000px rgba(0, 0, 0, 0.7)',
+    },
+    colors:{
+      primary:'#971ffd',
+      secondary:'#000000',
+      third:"blue"
+    },
+    fontFamily:{
+      poppins:['Poppins','sans-serif'],
+      montserrat:['Montserrat','sans-serif']
+    },
+    backgroundImage: {
+      'showcase':"url('./assets/headphones.png')",
+    }
+  },
     screens: {
       sm: "400px",
       // => @media (min-width: 640px) { ... }
@@ -18,7 +35,6 @@ module.exports = {
       "2xl": "1536px",
       // => @media (min-width: 1536px) { ... }
     },
-    extend: {},
   },
   plugins: [],
 };
